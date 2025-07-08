@@ -1,0 +1,96 @@
+<mujoco model="X30">
+  <compiler angle="radian" meshdir="../meshes/"/>
+
+  <asset>
+    <mesh name="torso" content_type="model/stl" file="torso.STL"/>
+    <mesh name="fl_hip" content_type="model/stl" file="fl_hip.STL"/>
+    <mesh name="fl_thigh" content_type="model/stl" file="fl_thigh.STL"/>
+    <mesh name="fl_shank" content_type="model/stl" file="fl_shank.STL"/>
+    <mesh name="fr_hip" content_type="model/stl" file="fr_hip.STL"/>
+    <mesh name="fr_thigh" content_type="model/stl" file="fr_thigh.STL"/>
+    <mesh name="fr_shank" content_type="model/stl" file="fr_shank.STL"/>
+    <mesh name="hl_hip" content_type="model/stl" file="hl_hip.STL"/>
+    <mesh name="hl_thigh" content_type="model/stl" file="hl_thigh.STL"/>
+    <mesh name="hl_shank" content_type="model/stl" file="hl_shank.STL"/>
+    <mesh name="hr_hip" content_type="model/stl" file="hr_hip.STL"/>
+    <mesh name="hr_thigh" content_type="model/stl" file="hr_thigh.STL"/>
+    <mesh name="hr_shank" content_type="model/stl" file="hr_shank.STL"/>
+  </asset>
+
+  <worldbody>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="torso"/>
+    <geom size="0.23 0.13 0.09" type="box"/>
+    <body name="FL_HIP" pos="0.291 0.08 0">
+      <inertial pos="-0.0018591 -0.011377 0.00027039" quat="0.492096 0.500552 0.506945 0.500295" mass="1.43" diaginertia="0.00267847 0.00159184 0.00140649"/>
+      <joint name="FL_HipX_joint" pos="0 0 0" axis="-1 0 0" range="-0.323 0.585" actuatorfrcrange="-84 84"/>
+      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="fl_hip"/>
+      <body name="FL_THIGH" pos="0 0.11675 0">
+        <inertial pos="-0.0087581 -0.023554 -0.055162" quat="0.724056 0.0298504 0.00499363 0.689077" mass="4.0809" diaginertia="0.0164227 0.0126096 0.00608011"/>
+        <joint name="FL_HipY_joint" pos="0 0 0" axis="0 -1 0" range="-2.967 0.262" actuatorfrcrange="-84 84"/>
+        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="fl_thigh"/>
+        <geom size="0.04 0.125" pos="-0.02 0 -0.13" type="cylinder"/>
+        <body name="FL_SHANK" pos="0 0 -0.3">
+          <inertial pos="0.0136996 1.90812e-05 -0.137342" quat="0.707173 -0.00648366 -0.00623253 0.706983" mass="0.77386" diaginertia="0.0115784 0.0112464 0.000424126"/>
+          <joint name="FL_Knee_joint" pos="0 0 0" axis="0 -1 0" range="0.349 2.531" actuatorfrcrange="-150 150"/>
+          <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="fl_shank"/>
+          <geom size="0.025 0.11" pos="0 0 -0.155" type="cylinder"/>
+          <geom size="0.036" pos="0 0 -0.31"/>
+        </body>
+      </body>
+    </body>
+    <body name="FR_HIP" pos="0.291 -0.08 0">
+      <inertial pos="-0.0018591 0.011377 -2.7675e-05" quat="0.507783 0.499436 0.488975 0.503611" mass="1.43" diaginertia="0.00267852 0.00159185 0.00140643"/>
+      <joint name="FR_HipX_joint" pos="0 0 0" axis="-1 0 0" range="-0.585 0.323" actuatorfrcrange="-84 84"/>
+      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="fr_hip"/>
+      <body name="FR_THIGH" pos="0 -0.11675 0">
+        <inertial pos="-0.0087433 0.023551 -0.055154" quat="0.688998 0.00499198 0.0298429 0.724132" mass="4.0809" diaginertia="0.0164227 0.0126095 0.00608033"/>
+        <joint name="FR_HipY_joint" pos="0 0 0" axis="0 -1 0" range="-2.967 0.262" actuatorfrcrange="-84 84"/>
+        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="fr_thigh"/>
+        <geom size="0.04 0.125" pos="-0.02 0 -0.13" type="cylinder"/>
+        <body name="FR_SHANK" pos="0 0 -0.3">
+          <inertial pos="0.0136996 1.90831e-05 -0.137342" quat="0.707173 -0.00648365 -0.00623254 0.706983" mass="0.77386" diaginertia="0.0115784 0.0112464 0.000424126"/>
+          <joint name="FR_Knee_joint" pos="0 0 0" axis="0 -1 0" range="0.349 2.531" actuatorfrcrange="-150 150"/>
+          <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="fr_shank"/>
+          <geom size="0.025 0.11" pos="0 0 -0.155" type="cylinder"/>
+          <geom size="0.036" pos="0 0 -0.31"/>
+        </body>
+      </body>
+    </body>
+    <body name="HL_HIP" pos="-0.291 0.08 0">
+      <inertial pos="0.0018591 -0.011377 -2.7675e-05" quat="0.499436 0.507783 0.503611 0.488975" mass="1.43" diaginertia="0.00267852 0.00159185 0.00140643"/>
+      <joint name="HL_HipX_joint" pos="0 0 0" axis="-1 0 0" range="-0.323 0.585" actuatorfrcrange="-84 84"/>
+      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="hl_hip"/>
+      <body name="HL_THIGH" pos="0 0.11675 0">
+        <inertial pos="-0.0087581 -0.023554 -0.055162" quat="0.724056 0.0298504 0.00499363 0.689077" mass="4.0809" diaginertia="0.0164227 0.0126096 0.00608011"/>
+        <joint name="HL_HipY_joint" pos="0 0 0" axis="0 -1 0" range="-2.967 0.262" actuatorfrcrange="-84 84"/>
+        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="hl_thigh"/>
+        <geom size="0.04 0.125" pos="-0.02 0 -0.13" type="cylinder"/>
+        <body name="HL_SHANK" pos="0 0 -0.3">
+          <inertial pos="0.0136996 1.90757e-05 -0.137342" quat="0.707173 -0.00648365 -0.00623255 0.706983" mass="0.77386" diaginertia="0.0115784 0.0112464 0.000424126"/>
+          <joint name="HL_Knee_joint" pos="0 0 0" axis="0 -1 0" range="0.349 2.531" actuatorfrcrange="-150 150"/>
+          <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="hl_shank"/>
+          <geom size="0.025 0.11" pos="0 0 -0.155" type="cylinder"/>
+          <geom size="0.036" pos="0 0 -0.31"/>
+        </body>
+      </body>
+    </body>
+    <body name="HR_HIP" pos="-0.291 -0.08 0">
+      <inertial pos="0.0018591 0.011377 0.00027039" quat="0.500552 0.492096 0.500295 0.506945" mass="1.43" diaginertia="0.00267847 0.00159184 0.00140649"/>
+      <joint name="HR_HipX_joint" pos="0 0 0" axis="-1 0 0" range="-0.585 0.323" actuatorfrcrange="-84 84"/>
+      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="hr_hip"/>
+      <body name="HR_THIGH" pos="0 -0.11675 0">
+        <inertial pos="-0.0087433 0.023551 -0.055154" quat="0.688998 0.00499198 0.0298429 0.724132" mass="4.0809" diaginertia="0.0164227 0.0126095 0.00608033"/>
+        <joint name="HR_HipY_joint" pos="0 0 0" axis="0 -1 0" range="-2.967 0.262" actuatorfrcrange="-84 84"/>
+        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="hr_thigh"/>
+        <geom size="0.04 0.125" pos="-0.02 0 -0.13" type="cylinder"/>
+        <body name="HR_SHANK" pos="0 0 -0.3">
+          <inertial pos="0.0136996 1.90757e-05 -0.137342" quat="0.707173 -0.00648365 -0.00623255 0.706983" mass="0.77386" diaginertia="0.0115784 0.0112464 0.000424126"/>
+          <joint name="HR_Knee_joint" pos="0 0 0" axis="0 -1 0" range="0.349 2.531" actuatorfrcrange="-150 150"/>
+          <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="hr_shank"/>
+          <geom size="0.025 0.11" pos="0 0 -0.155" type="cylinder"/>
+          <geom size="0.036" pos="0 0 -0.31"/>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+</mujoco>

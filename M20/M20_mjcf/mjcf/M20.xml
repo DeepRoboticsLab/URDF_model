@@ -1,0 +1,134 @@
+<mujoco model="M20">
+  <compiler angle="radian" meshdir="../meshes/"/>
+
+  <asset>
+    <mesh name="base_link" content_type="model/stl" file="base_link.STL"/>
+    <mesh name="fl_hipx" content_type="model/stl" file="fl_hipx.STL"/>
+    <mesh name="fl_hipy" content_type="model/stl" file="fl_hipy.STL"/>
+    <mesh name="fl_knee" content_type="model/stl" file="fl_knee.STL"/>
+    <mesh name="fl_wheel" content_type="model/stl" file="fl_wheel.STL"/>
+    <mesh name="fr_hipx" content_type="model/stl" file="fr_hipx.STL"/>
+    <mesh name="fr_hipy" content_type="model/stl" file="fr_hipy.STL"/>
+    <mesh name="fr_knee" content_type="model/stl" file="fr_knee.STL"/>
+    <mesh name="fr_wheel" content_type="model/stl" file="fr_wheel.STL"/>
+    <mesh name="hl_hipx" content_type="model/stl" file="hl_hipx.STL"/>
+    <mesh name="hl_hipy" content_type="model/stl" file="hl_hipy.STL"/>
+    <mesh name="hl_knee" content_type="model/stl" file="hl_knee.STL"/>
+    <mesh name="hl_wheel" content_type="model/stl" file="hl_wheel.STL"/>
+    <mesh name="hr_hipx" content_type="model/stl" file="hr_hipx.STL"/>
+    <mesh name="hr_hipy" content_type="model/stl" file="hr_hipy.STL"/>
+    <mesh name="hr_knee" content_type="model/stl" file="hr_knee.STL"/>
+    <mesh name="hr_wheel" content_type="model/stl" file="hr_wheel.STL"/>
+  </asset>
+
+  <worldbody>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.752941 0.752941 0.752941 1" mesh="base_link"/>
+    <geom size="0.375 0.045 0.07" type="box" rgba="0.752941 0.752941 0.752941 1"/>
+    <geom size="0.07 0.375" pos="0 0.045 0" quat="0.707107 0 0.707107 0" type="cylinder" rgba="0.752941 0.752941 0.752941 1"/>
+    <geom size="0.07 0.375" pos="0 -0.045 0" quat="0.707107 0 0.707107 0" type="cylinder" rgba="0.752941 0.752941 0.752941 1"/>
+    <body name="fl_hipx" pos="0.3141 0.0685 0">
+      <inertial pos="-0.0111893 0.00891693 0.000405666" quat="0.583127 0.477921 0.46978 0.459196" mass="0.26136" diaginertia="0.000375361 0.000288067 0.000181572"/>
+      <joint name="fl_hipx_joint" pos="0 0 0" axis="-1 0 0" range="-0.611 0.436" actuatorfrcrange="-76.4 76.4"/>
+      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.752941 0.752941 0.752941 1" mesh="fl_hipx"/>
+      <geom size="0.048 0.07" pos="0 0.055 0" quat="0.707107 0.707107 0 0" type="cylinder" rgba="0.752941 0.752941 0.752941 1"/>
+      <body name="fl_hipy">
+        <inertial pos="-0.00199375 0.098439 -0.130664" quat="0.675046 -0.0565515 0.062233 0.732968" mass="2.493" diaginertia="0.0390587 0.0388577 0.00283061"/>
+        <joint name="fl_hipy_joint" pos="0 0 0" axis="0 -1 0" range="-2.583 2.286" actuatorfrcrange="-76.4 76.4"/>
+        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.752941 0.752941 0.752941 1" mesh="fl_hipy"/>
+        <geom size="0.035 0.01 0.125" pos="-0.01 0.11 -0.125" type="box" rgba="0.752941 0.752941 0.752941 1"/>
+        <geom size="0.05 0.045" pos="0 0.11 -0.25" quat="0.707107 0.707107 0 0" type="cylinder" rgba="0.752941 0.752941 0.752941 1"/>
+        <body name="fl_knee" pos="0 0.0984 -0.25">
+          <inertial pos="0.00341917 0.00269124 -0.181265" quat="0.634837 -0.0526578 0.0490086 0.76929" mass="1.26" diaginertia="0.0133811 0.0129238 0.00143607"/>
+          <joint name="fl_knee_joint" pos="0 0 0" axis="0 -1 0" range="-2.792 2.809" actuatorfrcrange="-76.4 76.4"/>
+          <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.752941 0.752941 0.752941 1" mesh="fl_knee"/>
+          <geom size="0.03 0.0125 0.125" pos="0.015 -0.015 -0.125" type="box" rgba="0.752941 0.752941 0.752941 1"/>
+          <geom size="0.04 0.05" pos="0 0.02 -0.25" quat="0.707107 0.707107 0 0" type="cylinder" rgba="0.752941 0.752941 0.752941 1"/>
+          <body name="fl_wheel" pos="0 0.059676 -0.25">
+            <inertial pos="-3.11398e-07 0.000279002 5.70329e-07" quat="0.707107 0 0 0.707107" mass="0.638" diaginertia="0.002853 0.001535 0.001535"/>
+            <joint name="fl_wheel_joint" pos="0 0 0" axis="0 -1 0" actuatorfrcrange="-21.6 21.6"/>
+            <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.752941 0.752941 0.752941 1" mesh="fl_wheel"/>
+            <geom size="0.09 0.027" quat="0.707107 0.707107 0 0" type="cylinder" rgba="0.752941 0.752941 0.752941 1"/>
+          </body>
+        </body>
+      </body>
+    </body>
+    <body name="fr_hipx" pos="0.3141 -0.0685 0">
+      <inertial pos="-0.0110901 -0.00875035 0.000521421" quat="0.457507 0.468813 0.479224 0.584163" mass="0.26136" diaginertia="0.000375636 0.000288046 0.000181318"/>
+      <joint name="fr_hipx_joint" pos="0 0 0" axis="-1 0 0" range="-0.436 0.611" actuatorfrcrange="-76.4 76.4"/>
+      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.752941 0.752941 0.752941 1" mesh="fr_hipx"/>
+      <geom size="0.048 0.07" pos="0 -0.055 0" quat="0.707107 0.707107 0 0" type="cylinder" rgba="0.752941 0.752941 0.752941 1"/>
+      <body name="fr_hipy">
+        <inertial pos="-0.00229992 -0.0989709 -0.130925" quat="0.695336 0.0585752 -0.0588913 0.713869" mass="2.493" diaginertia="0.0394872 0.039277 0.00291879"/>
+        <joint name="fr_hipy_joint" pos="0 0 0" axis="0 -1 0" range="-2.583 2.286" actuatorfrcrange="-76.4 76.4"/>
+        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.752941 0.752941 0.752941 1" mesh="fr_hipy"/>
+        <geom size="0.035 0.01 0.125" pos="-0.01 -0.11 -0.125" type="box" rgba="0.752941 0.752941 0.752941 1"/>
+        <geom size="0.05 0.045" pos="0 -0.11 -0.25" quat="0.707107 0.707107 0 0" type="cylinder" rgba="0.752941 0.752941 0.752941 1"/>
+        <body name="fr_knee" pos="0 -0.0984 -0.25">
+          <inertial pos="0.00354945 -0.00247884 -0.180089" quat="0.76975 0.0474696 -0.0509581 0.634536" mass="1.26" diaginertia="0.0133732 0.0129238 0.00104502"/>
+          <joint name="fr_knee_joint" pos="0 0 0" axis="0 -1 0" range="-2.792 2.809" actuatorfrcrange="-76.4 76.4"/>
+          <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.752941 0.752941 0.752941 1" mesh="fr_knee"/>
+          <geom size="0.03 0.0125 0.125" pos="0.015 0.015 -0.125" type="box" rgba="0.752941 0.752941 0.752941 1"/>
+          <geom size="0.04 0.05" pos="0 -0.02 -0.25" quat="0.707107 0.707107 0 0" type="cylinder" rgba="0.752941 0.752941 0.752941 1"/>
+          <body name="fr_wheel" pos="0 -0.059676 -0.25">
+            <inertial pos="-6.47327e-07 -0.000279012 -4.6242e-08" quat="0.707107 0 0 0.707107" mass="0.638" diaginertia="0.002853 0.001535 0.001535"/>
+            <joint name="fr_wheel_joint" pos="0 0 0" axis="0 -1 0" actuatorfrcrange="-21.6 21.6"/>
+            <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.752941 0.752941 0.752941 1" mesh="fr_wheel"/>
+            <geom size="0.09 0.027" quat="0.707107 0.707107 0 0" type="cylinder" rgba="0.752941 0.752941 0.752941 1"/>
+          </body>
+        </body>
+      </body>
+    </body>
+    <body name="hl_hipx" pos="-0.3141 0.0685 0">
+      <inertial pos="0.0110901 0.00875014 0.000524884" quat="0.46978 0.459196 0.583127 0.477921" mass="0.26136" diaginertia="0.000375361 0.000288067 0.000181572"/>
+      <joint name="hl_hipx_joint" pos="0 0 0" axis="-1 0 0" range="-0.611 0.436" actuatorfrcrange="-76.4 76.4"/>
+      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.752941 0.752941 0.752941 1" mesh="hl_hipx"/>
+      <geom size="0.048 0.07" pos="0 0.055 0" quat="0.707107 0.707107 0 0" type="cylinder" rgba="0.752941 0.752941 0.752941 1"/>
+      <body name="hl_hipy">
+        <inertial pos="0.00204343 0.0990227 -0.130697" quat="0.749047 -0.0627277 0.0547905 0.65726" mass="2.493" diaginertia="0.0395677 0.0393575 0.00290384"/>
+        <joint name="hl_hipy_joint" pos="0 0 0" axis="0 -1 0" range="-2.286 2.583" actuatorfrcrange="-76.4 76.4"/>
+        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.752941 0.752941 0.752941 1" mesh="hl_hipy"/>
+        <geom size="0.035 0.01 0.125" pos="0.01 0.11 -0.125" type="box" rgba="0.752941 0.752941 0.752941 1"/>
+        <geom size="0.05 0.045" pos="0 0.11 -0.25" quat="0.707107 0.707107 0 0" type="cylinder" rgba="0.752941 0.752941 0.752941 1"/>
+        <body name="hl_knee" pos="0 0.0984 -0.25">
+          <inertial pos="-0.00354945 0.00247885 -0.180089" quat="0.76975 -0.0474696 0.0509581 0.634536" mass="1.26" diaginertia="0.0133732 0.0129238 0.00104502"/>
+          <joint name="hl_knee_joint" pos="0 0 0" axis="0 -1 0" range="-2.809 2.792" actuatorfrcrange="-76.4 76.4"/>
+          <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.752941 0.752941 0.752941 1" mesh="hl_knee"/>
+          <geom size="0.03 0.0125 0.125" pos="-0.015 0.015 -0.125" type="box" rgba="0.752941 0.752941 0.752941 1"/>
+          <geom size="0.04 0.05" pos="0 0.02 -0.25" quat="0.707107 0.707107 0 0" type="cylinder" rgba="0.752941 0.752941 0.752941 1"/>
+          <body name="hl_wheel" pos="0 0.059676 -0.25">
+            <inertial pos="-6.07889e-07 0.000279009 2.1049e-07" quat="0.707107 0 0 0.707107" mass="0.638" diaginertia="0.002853 0.001535 0.001535"/>
+            <joint name="hl_wheel_joint" pos="0 0 0" axis="0 -1 0" actuatorfrcrange="-21.6 21.6"/>
+            <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.752941 0.752941 0.752941 1" mesh="hl_wheel"/>
+            <geom size="0.09 0.027" quat="0.707107 0.707107 0 0" type="cylinder" rgba="0.752941 0.752941 0.752941 1"/>
+          </body>
+        </body>
+      </body>
+    </body>
+    <body name="hr_hipx" pos="-0.3141 -0.0685 0">
+      <inertial pos="0.0110902 -0.00875012 0.000524937" quat="0.477921 0.583127 0.459196 0.46978" mass="0.26136" diaginertia="0.000375361 0.000288067 0.000181572"/>
+      <joint name="hr_hipx_joint" pos="0 0 0" axis="-1 0 0" range="-0.436 0.611" actuatorfrcrange="-76.4 76.4"/>
+      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.752941 0.752941 0.752941 1" mesh="hr_hipx"/>
+      <geom size="0.048 0.07" pos="0 -0.055 0" quat="0.707107 0.707107 0 0" type="cylinder" rgba="0.752941 0.752941 0.752941 1"/>
+      <body name="hr_hipy">
+        <inertial pos="0.001992 -0.0983704 -0.130561" quat="0.675497 0.0566996 -0.0622518 0.73254" mass="2.493" diaginertia="0.0390748 0.0388767 0.0028335"/>
+        <joint name="hr_hipy_joint" pos="0 0 0" axis="0 -1 0" range="-2.286 2.583" actuatorfrcrange="-76.4 76.4"/>
+        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.752941 0.752941 0.752941 1" mesh="hr_hipy"/>
+        <geom size="0.035 0.01 0.125" pos="0.01 -0.11 -0.125" type="box" rgba="0.752941 0.752941 0.752941 1"/>
+        <geom size="0.05 0.045" pos="0 -0.11 -0.25" quat="0.707107 0.707107 0 0" type="cylinder" rgba="0.752941 0.752941 0.752941 1"/>
+        <body name="hr_knee" pos="0 -0.0984 -0.25">
+          <inertial pos="-0.00341053 -0.00270202 -0.181287" quat="0.634536 0.0509581 -0.0474696 0.76975" mass="1.26" diaginertia="0.0133732 0.0129238 0.00104502"/>
+          <joint name="hr_knee_joint" pos="0 0 0" axis="0 -1 0" range="-2.809 2.792" actuatorfrcrange="-76.4 76.4"/>
+          <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.752941 0.752941 0.752941 1" mesh="hr_knee"/>
+          <geom size="0.03 0.0125 0.125" pos="-0.015 0.015 -0.125" type="box" rgba="0.752941 0.752941 0.752941 1"/>
+          <geom size="0.04 0.05" pos="0 -0.02 -0.25" quat="0.707107 0.707107 0 0" type="cylinder" rgba="0.752941 0.752941 0.752941 1"/>
+          <body name="hr_wheel" pos="0 -0.059676 -0.25">
+            <inertial pos="6.09746e-07 -0.000279009 2.01314e-07" quat="0.707107 0 0 0.707107" mass="0.638" diaginertia="0.002853 0.001535 0.001535"/>
+            <joint name="hr_wheel_joint" pos="0 0 0" axis="0 -1 0" actuatorfrcrange="-21.6 21.6"/>
+            <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.752941 0.752941 0.752941 1" mesh="hr_wheel"/>
+            <geom size="0.09 0.027" quat="0.707107 0.707107 0 0" type="cylinder" rgba="0.752941 0.752941 0.752941 1"/>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+</mujoco>
