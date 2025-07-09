@@ -2,6 +2,8 @@
   <compiler angle="radian" meshdir="../meshes/"/>
 
   <asset>
+    <texture type="2d" name="checker" builtin="checker" rgb1="0.2 0.3 0.4" rgb2="0.9 0.9 0.9" width="500" height="500"/>
+    <material name="checker_mat" texture="checker" specular="1" shininess="1" texrepeat="15 15"/>
     <mesh name="base_link" content_type="model/stl" file="base_link.STL"/>
     <mesh name="fl_hipx" content_type="model/stl" file="fl_hipx.STL"/>
     <mesh name="fl_hipy" content_type="model/stl" file="fl_hipy.STL"/>
@@ -22,6 +24,8 @@
   </asset>
 
   <worldbody>
+    <geom name="floor" type="plane" size="10 10 0.1" pos="0 0 -1" material="checker_mat"/>
+    <light directional="true" pos="-0.5 0.5 3" dir="0 0 -1"/>
     <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.752941 0.752941 0.752941 1" mesh="base_link"/>
     <geom size="0.375 0.045 0.07" type="box" rgba="0.752941 0.752941 0.752941 1"/>
     <geom size="0.07 0.375" pos="0 0.045 0" quat="0.707107 0 0.707107 0" type="cylinder" rgba="0.752941 0.752941 0.752941 1"/>

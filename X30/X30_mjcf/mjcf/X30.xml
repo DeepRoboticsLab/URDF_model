@@ -2,6 +2,8 @@
   <compiler angle="radian" meshdir="../meshes/"/>
 
   <asset>
+    <texture type="2d" name="checker" builtin="checker" rgb1="0.2 0.3 0.4" rgb2="0.9 0.9 0.9" width="500" height="500"/>
+    <material name="checker_mat" texture="checker" specular="1" shininess="1" texrepeat="15 15"/>
     <mesh name="torso" content_type="model/stl" file="torso.STL"/>
     <mesh name="fl_hip" content_type="model/stl" file="fl_hip.STL"/>
     <mesh name="fl_thigh" content_type="model/stl" file="fl_thigh.STL"/>
@@ -18,6 +20,8 @@
   </asset>
 
   <worldbody>
+    <geom name="floor" type="plane" size="10 10 0.1" pos="0 0 -1" material="checker_mat"/>
+    <light directional="true" pos="-0.5 0.5 3" dir="0 0 -1"/>
     <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="torso"/>
     <geom size="0.23 0.13 0.09" type="box"/>
     <body name="FL_HIP" pos="0.291 0.08 0">
