@@ -1,19 +1,19 @@
 # Robot Models Repository
 
-This repository contains 3D models for four Deep Robotics robots: **Lite3**, **M20**, **X30**, and **M20_Piper**. Each model is provided in MJCF, URDF, and USD formats. To visualize the model and do some measuring, I recommend using this [tool](https://viewer.robotsfan.com/). Just drag your folder to the web page and you can see everything.
+This repository contains 3D models for six Deep Robotics robots: **Lite3**, **M20**, **X30**, **M20_Piper**, **DR02 Pro**, and **DR02 Standard**. Each model is provided in MJCF, URDF, and USD formats. To visualize a model and take measurements, we recommend using this [viewer tool](https://viewer.robotsfan.com/) — just drag the model folder onto the web page.
 
-<span style="color: red;">**Note**</span>: This repository only contains low resolution files. To download the high resolution files, please use [this link](https://drive.google.com/drive/folders/1EOELXUYSBPEJeD0rUIkJxnlLMDr6IHBV?usp=sharing)
-
+High-resolution models are available on [Google Drive](https://drive.google.com/drive/folders/1EOELXUYSBPEJeD0rUIkJxnlLMDr6IHBV?usp=sharing) and are intended for use with modern simulators such as Isaac Lab and Isaac Sim. The low-resolution models bundled in this repository are provided for broad compatibility with older simulators.
 
 ## Model Overview
-**Note**: High resolution models are good for new simulators like isaaclab/isaacsim but old simulators like pybullet cannot open files this big.
+
 | Robot Model | High Resolution Image | Low Resolution Image |
 |:-----------:|:---------------------:|:--------------------:|
-| **Lite3**   | <img src="./images/lite3_high_res.png" width="200" /><br>Lite3/Lite3_urdf/urdf/Lite3_high_res.urdf | <img src="./images/lite3.png" width="200" /><br>Lite3/Lite3_urdf/urdf/Lite3.urdf |
-| **X30**     | <img src="./images/x30_high_res.png" width="200" /><br>X30/X30_urdf/urdf/X30_high_res.urdf | <img src="./images/x30.png" width="200" /><br>X30/X30_urdf/urdf/X30.urdf |
-| **M20**     | <img src="./images/m20_high_res.png" width="200" /><br>M20/M20_urdf/urdf/M20_high_res.urdf | <img src="./images/m20.png" width="200" /><br>M20/M20_urdf/urdf/M20.urdf |
-| **M20_Piper** | *Not available yet* | <img src="./images/m20_piper.png" width="200" /><br>M20_Piper/URDF/urdf/M20_Piper.urdf |
+| **Lite3** | <img src="./images/lite3_high_res.png" width="200" /> | <img src="./images/lite3.png" width="200" /> |
+| **X30** | <img src="./images/x30_high_res.png" width="200" /> | <img src="./images/x30.png" width="200" /> |
+| **M20** | <img src="./images/m20_high_res.png" width="200" /> | <img src="./images/m20.png" width="200" /> |
+| **M20_Piper** | Not available yet | <img src="./images/m20_piper.png" width="200" /> |
+| **DR02 Pro** | Not available yet | <img src="./images/dr02_pro.png" width="200" /> |
+| **DR02 Standard** | Not available yet | <img src="./images/dr02_std.png" width="200" /> |
 
 ## Contributors
 See the [Contributors](Contributors.md) page for a list of contributors.
-

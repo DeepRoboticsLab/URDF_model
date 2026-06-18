@@ -1,0 +1,258 @@
+<mujoco model="M20_Piper">
+  <compiler angle="radian" meshdir="meshes/" />
+  <asset>
+    <mesh name="base_link" file="base_link.STL" />
+    <mesh name="fl_hipx" file="fl_hipx.STL" />
+    <mesh name="fl_hipy" file="fl_hipy.STL" />
+    <mesh name="fl_knee" file="fl_knee.STL" />
+    <mesh name="fl_wheel" file="fl_wheel.STL" />
+    <mesh name="fr_hipx" file="fr_hipx.STL" />
+    <mesh name="fr_hipy" file="fr_hipy.STL" />
+    <mesh name="fr_knee" file="fr_knee.STL" />
+    <mesh name="fr_wheel" file="fr_wheel.STL" />
+    <mesh name="hl_hipx" file="hl_hipx.STL" />
+    <mesh name="hl_hipy" file="hl_hipy.STL" />
+    <mesh name="hl_knee" file="hl_knee.STL" />
+    <mesh name="hl_wheel" file="hl_wheel.STL" />
+    <mesh name="hr_hipx" file="hr_hipx.STL" />
+    <mesh name="hr_hipy" file="hr_hipy.STL" />
+    <mesh name="hr_knee" file="hr_knee.STL" />
+    <mesh name="hr_wheel" file="hr_wheel.STL" />
+    <mesh name="arm_base_link" file="arm_base_link.STL" />
+    <mesh name="link1" file="link1.STL" />
+    <mesh name="link2" file="link2.STL" />
+    <mesh name="link3" file="link3.STL" />
+    <mesh name="link4" file="link4.STL" />
+    <mesh name="link5" file="link5.STL" />
+    <mesh name="link6" file="link6.STL" />
+    <mesh name="gripper_base" file="gripper_base.STL" />
+    <mesh name="link7" file="link7.STL" />
+    <mesh name="link8" file="link8.STL" />
+    <material name="base_link_mat" rgba="0.749 0.749 0.749 1" specular="0" />
+    <material name="fl_hipx_mat" rgba="0.749 0.749 0.749 1" specular="0" />
+    <material name="fl_hipy_mat" rgba="0.749 0.749 0.749 1" specular="0" />
+    <material name="fl_knee_mat" rgba="0.749 0.749 0.749 1" specular="0" />
+    <material name="fl_wheel_mat" rgba="0.749 0.749 0.749 1" specular="0" />
+    <material name="fr_hipx_mat" rgba="0.749 0.749 0.749 1" specular="0" />
+    <material name="fr_hipy_mat" rgba="0.749 0.749 0.749 1" specular="0" />
+    <material name="fr_knee_mat" rgba="0.749 0.749 0.749 1" specular="0" />
+    <material name="fr_wheel_mat" rgba="0.749 0.749 0.749 1" specular="0" />
+    <material name="hl_hipx_mat" rgba="0.749 0.749 0.749 1" specular="0" />
+    <material name="hl_hipy_mat" rgba="0.749 0.749 0.749 1" specular="0" />
+    <material name="hl_knee_mat" rgba="0.749 0.749 0.749 1" specular="0" />
+    <material name="hl_wheel_mat" rgba="0.749 0.749 0.749 1" specular="0" />
+    <material name="hr_hipx_mat" rgba="0.749 0.749 0.749 1" specular="0" />
+    <material name="hr_hipy_mat" rgba="0.749 0.749 0.749 1" specular="0" />
+    <material name="hr_knee_mat" rgba="0.749 0.749 0.749 1" specular="0" />
+    <material name="hr_wheel_mat" rgba="0.749 0.749 0.749 1" specular="0" />
+    <material name="arm_base_link_mat" rgba="0.7922 0.8196 0.9294 1" specular="0" />
+    <material name="link1_mat" rgba="0.7922 0.8196 0.9294 1" specular="0" />
+    <material name="link2_mat" rgba="0.7922 0.8196 0.9294 1" specular="0" />
+    <material name="link3_mat" rgba="0.7922 0.8196 0.9294 1" specular="0" />
+    <material name="link4_mat" rgba="0.7922 0.8196 0.9294 1" specular="0" />
+    <material name="link5_mat" rgba="0.7922 0.8196 0.9294 1" specular="0" />
+    <material name="link6_mat" rgba="0.898 0.9137 0.9255 1" specular="0" />
+    <material name="gripper_base_mat" rgba="0.7922 0.8196 0.9294 1" specular="0" />
+    <material name="link7_mat" rgba="0.7922 0.8196 0.9294 1" specular="0" />
+    <material name="link8_mat" rgba="0.7922 0.8196 0.9294 1" specular="0" />
+  </asset>
+
+  <worldbody>
+    <body name="base_link" pos="0 0 0">
+      <freejoint/>
+      <inertial pos="0.0035511 0.0016508 -0.0034646" mass="15.882" fullinertia="0.0880787 0.533816 0.563915 0.001396 0.000111 0.000519"/>
+      <geom pos="0 0 0" group="1" contype="0" conaffinity="0" material="base_link_mat" type="mesh" mesh="base_link" />
+      <geom pos="0 0 0" rgba="0.9373 0.2667 0.2667 1" group="3" contype="1" conaffinity="1" type="box" size="0.375 0.045 0.07" />
+      <geom pos="0 0.045 0" quat="0.7071068 0 0.7071068 0" rgba="0.9373 0.2667 0.2667 1" group="3" contype="1" conaffinity="1" type="cylinder" size="0.07 0.375" />
+      <geom pos="0 -0.045 0" quat="0.7071068 0 0.7071068 0" rgba="0.9373 0.2667 0.2667 1" group="3" contype="1" conaffinity="1" type="cylinder" size="0.07 0.375" />
+      <body name="fl_hipx" pos="0.3141 0.0685 0">
+        <joint name="fl_hipx_joint" type="hinge" axis="-1 0 0" limited="true" range="-0.611 0.436" damping="0" frictionloss="0"/>
+        <inertial pos="-0.0111893 0.0089169 0.0004057" mass="0.26136" fullinertia="0.000186 0.000371 0.000288 0.000025 -0.000012 -0.000008"/>
+        <geom pos="0 0 0" group="1" contype="0" conaffinity="0" material="fl_hipx_mat" type="mesh" mesh="fl_hipx" />
+        <geom pos="0 0.055 0" quat="0.7071068 0.7071068 0 0" rgba="0.9373 0.2667 0.2667 1" group="3" contype="1" conaffinity="1" type="cylinder" size="0.048 0.07" />
+        <body name="fl_hipy" pos="0 0 0">
+          <joint name="fl_hipy_joint" type="hinge" axis="0 -1 0" limited="true" range="-2.583 2.286" damping="0" frictionloss="0"/>
+          <inertial pos="-0.0019937 0.098439 -0.1306636" mass="2.493" fullinertia="0.038859 0.03804 0.003848 -0.000023 -0.000037 -0.005985"/>
+          <geom pos="0 0 0" group="1" contype="0" conaffinity="0" material="fl_hipy_mat" type="mesh" mesh="fl_hipy" />
+          <geom pos="-0.01 0.11 -0.125" rgba="0.9373 0.2667 0.2667 1" group="3" contype="1" conaffinity="1" type="box" size="0.035 0.01 0.125" />
+          <geom pos="0 0.11 -0.25" quat="0.7071068 0.7071068 0 0" rgba="0.9373 0.2667 0.2667 1" group="3" contype="1" conaffinity="1" type="cylinder" size="0.05 0.045" />
+          <body name="fl_knee" pos="0 0.0984 -0.25">
+            <joint name="fl_knee_joint" type="hinge" axis="0 -1 0" limited="true" range="-2.792 2.809" damping="0" frictionloss="0"/>
+            <inertial pos="0.0034192 0.0026912 -0.1812655" mass="1.26" fullinertia="0.012936 0.013123 0.001682 -0.000053 0.000226 -0.001681"/>
+            <geom pos="0 0 0" group="1" contype="0" conaffinity="0" material="fl_knee_mat" type="mesh" mesh="fl_knee" />
+            <geom pos="0.015 -0.015 -0.125" rgba="0.9373 0.2667 0.2667 1" group="3" contype="1" conaffinity="1" type="box" size="0.03 0.0125 0.125" />
+            <geom pos="0 0.02 -0.25" quat="0.7071068 0.7071068 0 0" rgba="0.9373 0.2667 0.2667 1" group="3" contype="1" conaffinity="1" type="cylinder" size="0.04 0.05" />
+            <body name="fl_wheel" pos="0 0.059676 -0.25">
+              <joint name="fl_wheel_joint" type="hinge" axis="0 -1 0" damping="0" frictionloss="0"/>
+              <inertial pos="-0.0000003 0.000279 0.0000006" mass="0.638" diaginertia="0.001535 0.002853 0.001535"/>
+              <geom pos="0 0 0" group="1" contype="0" conaffinity="0" material="fl_wheel_mat" type="mesh" mesh="fl_wheel" />
+              <geom pos="0 0 0" quat="0.7071068 0.7071068 0 0" rgba="0.9373 0.2667 0.2667 1" group="3" contype="1" conaffinity="1" type="cylinder" size="0.09 0.027" />
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="fr_hipx" pos="0.3141 -0.0685 0">
+        <joint name="fr_hipx_joint" type="hinge" axis="-1 0 0" limited="true" range="-0.436 0.611" damping="0" frictionloss="0"/>
+        <inertial pos="-0.0110901 -0.0087503 0.0005214" mass="0.26136" fullinertia="0.000186 0.000371 0.000288 -0.000026 -0.000012 0.000008"/>
+        <geom pos="0 0 0" group="1" contype="0" conaffinity="0" material="fr_hipx_mat" type="mesh" mesh="fr_hipx" />
+        <geom pos="0 -0.055 0" quat="0.7071068 0.7071068 0 0" rgba="0.9373 0.2667 0.2667 1" group="3" contype="1" conaffinity="1" type="cylinder" size="0.048 0.07" />
+        <body name="fr_hipy" pos="0 0 0">
+          <joint name="fr_hipy_joint" type="hinge" axis="0 -1 0" limited="true" range="-2.583 2.286" damping="0" frictionloss="0"/>
+          <inertial pos="-0.0022999 -0.0989709 -0.130925" mass="2.493" fullinertia="0.039277 0.038485 0.003921 0.000005 -0.000063 0.00597"/>
+          <geom pos="0 0 0" group="1" contype="0" conaffinity="0" material="fr_hipy_mat" type="mesh" mesh="fr_hipy" />
+          <geom pos="-0.01 -0.11 -0.125" rgba="0.9373 0.2667 0.2667 1" group="3" contype="1" conaffinity="1" type="box" size="0.035 0.01 0.125" />
+          <geom pos="0 -0.11 -0.25" quat="0.7071068 0.7071068 0 0" rgba="0.9373 0.2667 0.2667 1" group="3" contype="1" conaffinity="1" type="cylinder" size="0.05 0.045" />
+          <body name="fr_knee" pos="0 -0.0984 -0.25">
+            <joint name="fr_knee_joint" type="hinge" axis="0 -1 0" limited="true" range="-2.792 2.809" damping="0" frictionloss="0"/>
+            <inertial pos="0.0035495 -0.0024788 -0.1800892" mass="1.26" fullinertia="0.012936 0.013123 0.001283 0.000053 0.000226 0.001681"/>
+            <geom pos="0 0 0" group="1" contype="0" conaffinity="0" material="fr_knee_mat" type="mesh" mesh="fr_knee" />
+            <geom pos="0.015 0.015 -0.125" rgba="0.9373 0.2667 0.2667 1" group="3" contype="1" conaffinity="1" type="box" size="0.03 0.0125 0.125" />
+            <geom pos="0 -0.02 -0.25" quat="0.7071068 0.7071068 0 0" rgba="0.9373 0.2667 0.2667 1" group="3" contype="1" conaffinity="1" type="cylinder" size="0.04 0.05" />
+            <body name="fr_wheel" pos="0 -0.059676 -0.25">
+              <joint name="fr_wheel_joint" type="hinge" axis="0 -1 0" damping="0" frictionloss="0"/>
+              <inertial pos="-0.0000006 -0.000279 0" mass="0.638" diaginertia="0.001535 0.002853 0.001535"/>
+              <geom pos="0 0 0" group="1" contype="0" conaffinity="0" material="fr_wheel_mat" type="mesh" mesh="fr_wheel" />
+              <geom pos="0 0 0" quat="0.7071068 0.7071068 0 0" rgba="0.9373 0.2667 0.2667 1" group="3" contype="1" conaffinity="1" type="cylinder" size="0.09 0.027" />
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="hl_hipx" pos="-0.3141 0.0685 0">
+        <joint name="hl_hipx_joint" type="hinge" axis="-1 0 0" limited="true" range="-0.611 0.436" damping="0" frictionloss="0"/>
+        <inertial pos="0.0110901 0.0087501 0.0005249" mass="0.26136" fullinertia="0.000186 0.000371 0.000288 -0.000025 0.000012 -0.000008"/>
+        <geom pos="0 0 0" group="1" contype="0" conaffinity="0" material="hl_hipx_mat" type="mesh" mesh="hl_hipx" />
+        <geom pos="0 0.055 0" quat="0.7071068 0.7071068 0 0" rgba="0.9373 0.2667 0.2667 1" group="3" contype="1" conaffinity="1" type="cylinder" size="0.048 0.07" />
+        <body name="hl_hipy" pos="0 0 0">
+          <joint name="hl_hipy_joint" type="hinge" axis="0 -1 0" limited="true" range="-2.286 2.583" damping="0" frictionloss="0"/>
+          <inertial pos="0.0020434 0.0990227 -0.1306973" mass="2.493" fullinertia="0.039361 0.038554 0.003914 0.000029 0.000009 -0.006001"/>
+          <geom pos="0 0 0" group="1" contype="0" conaffinity="0" material="hl_hipy_mat" type="mesh" mesh="hl_hipy" />
+          <geom pos="0.01 0.11 -0.125" rgba="0.9373 0.2667 0.2667 1" group="3" contype="1" conaffinity="1" type="box" size="0.035 0.01 0.125" />
+          <geom pos="0 0.11 -0.25" quat="0.7071068 0.7071068 0 0" rgba="0.9373 0.2667 0.2667 1" group="3" contype="1" conaffinity="1" type="cylinder" size="0.05 0.045" />
+          <body name="hl_knee" pos="0 0.0984 -0.25">
+            <joint name="hl_knee_joint" type="hinge" axis="0 -1 0" limited="true" range="-2.809 2.792" damping="0" frictionloss="0"/>
+            <inertial pos="-0.0035495 0.0024788 -0.1800893" mass="1.26" fullinertia="0.012936 0.013123 0.001283 0.000053 -0.000226 -0.001681"/>
+            <geom pos="0 0 0" group="1" contype="0" conaffinity="0" material="hl_knee_mat" type="mesh" mesh="hl_knee" />
+            <geom pos="-0.015 0.015 -0.125" rgba="0.9373 0.2667 0.2667 1" group="3" contype="1" conaffinity="1" type="box" size="0.03 0.0125 0.125" />
+            <geom pos="0 0.02 -0.25" quat="0.7071068 0.7071068 0 0" rgba="0.9373 0.2667 0.2667 1" group="3" contype="1" conaffinity="1" type="cylinder" size="0.04 0.05" />
+            <body name="hl_wheel" pos="0 0.059676 -0.25">
+              <joint name="hl_wheel_joint" type="hinge" axis="0 -1 0" damping="0" frictionloss="0"/>
+              <inertial pos="-0.0000006 0.000279 0.0000002" mass="0.638" diaginertia="0.001535 0.002853 0.001535"/>
+              <geom pos="0 0 0" group="1" contype="0" conaffinity="0" material="hl_wheel_mat" type="mesh" mesh="hl_wheel" />
+              <geom pos="0 0 0" quat="0.7071068 0.7071068 0 0" rgba="0.9373 0.2667 0.2667 1" group="3" contype="1" conaffinity="1" type="cylinder" size="0.09 0.027" />
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="hr_hipx" pos="-0.3141 -0.0685 0">
+        <joint name="hr_hipx_joint" type="hinge" axis="-1 0 0" limited="true" range="-0.436 0.611" damping="0" frictionloss="0"/>
+        <inertial pos="0.0110902 -0.0087501 0.0005249" mass="0.26136" fullinertia="0.000186 0.000371 0.000288 0.000025 0.000012 0.000008"/>
+        <geom pos="0 0 0" group="1" contype="0" conaffinity="0" material="hr_hipx_mat" type="mesh" mesh="hr_hipx" />
+        <geom pos="0 -0.055 0" quat="0.7071068 0.7071068 0 0" rgba="0.9373 0.2667 0.2667 1" group="3" contype="1" conaffinity="1" type="cylinder" size="0.048 0.07" />
+        <body name="hr_hipy" pos="0 0 0">
+          <joint name="hr_hipy_joint" type="hinge" axis="0 -1 0" limited="true" range="-2.286 2.583" damping="0" frictionloss="0"/>
+          <inertial pos="0.001992 -0.0983704 -0.1305607" mass="2.493" fullinertia="0.038878 0.038053 0.003854 -0.000022 0.000034 0.005995"/>
+          <geom pos="0 0 0" group="1" contype="0" conaffinity="0" material="hr_hipy_mat" type="mesh" mesh="hr_hipy" />
+          <geom pos="0.01 -0.11 -0.125" rgba="0.9373 0.2667 0.2667 1" group="3" contype="1" conaffinity="1" type="box" size="0.035 0.01 0.125" />
+          <geom pos="0 -0.11 -0.25" quat="0.7071068 0.7071068 0 0" rgba="0.9373 0.2667 0.2667 1" group="3" contype="1" conaffinity="1" type="cylinder" size="0.05 0.045" />
+          <body name="hr_knee" pos="0 -0.0984 -0.25">
+            <joint name="hr_knee_joint" type="hinge" axis="0 -1 0" limited="true" range="-2.809 2.792" damping="0" frictionloss="0"/>
+            <inertial pos="-0.0034105 -0.002702 -0.1812875" mass="1.26" fullinertia="0.012936 0.013123 0.001283 -0.000053 -0.000226 0.001681"/>
+            <geom pos="0 0 0" group="1" contype="0" conaffinity="0" material="hr_knee_mat" type="mesh" mesh="hr_knee" />
+            <geom pos="-0.015 0.015 -0.125" rgba="0.9373 0.2667 0.2667 1" group="3" contype="1" conaffinity="1" type="box" size="0.03 0.0125 0.125" />
+            <geom pos="0 -0.02 -0.25" quat="0.7071068 0.7071068 0 0" rgba="0.9373 0.2667 0.2667 1" group="3" contype="1" conaffinity="1" type="cylinder" size="0.04 0.05" />
+            <body name="hr_wheel" pos="0 -0.059676 -0.25">
+              <joint name="hr_wheel_joint" type="hinge" axis="0 -1 0" damping="0" frictionloss="0"/>
+              <inertial pos="0.0000006 -0.000279 0.0000002" mass="0.638" diaginertia="0.001535 0.002853 0.001535"/>
+              <geom pos="0 0 0" group="1" contype="0" conaffinity="0" material="hr_wheel_mat" type="mesh" mesh="hr_wheel" />
+              <geom pos="0 0 0" quat="0.7071068 0.7071068 0 0" rgba="0.9373 0.2667 0.2667 1" group="3" contype="1" conaffinity="1" type="cylinder" size="0.09 0.027" />
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="arm_base_link" pos="0 0 0.0888">
+        <inertial pos="-0.0047364 0.0000257 0.0414515" mass="1.02" fullinertia="0.00267433 0.00282612 0.00089624 -0.00000073 -0.00017389 0.0000004"/>
+        <geom pos="0 0 0" group="1" contype="0" conaffinity="0" material="arm_base_link_mat" type="mesh" mesh="arm_base_link" />
+        <geom pos="0 0 0" rgba="0.9373 0.2667 0.2667 1" group="3" contype="1" conaffinity="1" type="mesh" mesh="arm_base_link" />
+        <body name="link1" pos="0 0 0.123">
+          <joint name="joint1" type="hinge" axis="0 0 1" limited="true" range="-2.618 2.618" damping="0" frictionloss="0"/>
+          <inertial pos="0.0001215 0.0001046 -0.004386" mass="0.71" fullinertia="0.00048916 0.00040472 0.00043982 -0.00000036 -0.00000224 -0.00000242"/>
+          <geom pos="0 0 0" group="1" contype="0" conaffinity="0" material="link1_mat" type="mesh" mesh="link1" />
+          <geom pos="0 0 0" rgba="0.9373 0.2667 0.2667 1" group="3" contype="1" conaffinity="1" type="mesh" mesh="link1" />
+          <body name="link2" pos="0 0 0" quat="0.0480084 -0.0480134 -0.7054761 -0.7054739">
+            <joint name="joint2" type="hinge" axis="0 0 1" limited="true" range="0 3.14" damping="0" frictionloss="0"/>
+            <inertial pos="0.1986661 -0.0109269 0.0014212" mass="1.17" fullinertia="0.00116918 0.06785384 0.06774489 -0.00180037 0.00025146 -0.00000455"/>
+            <geom pos="0 0 0" group="1" contype="0" conaffinity="0" material="link2_mat" type="mesh" mesh="link2" />
+            <geom pos="0 0 0" rgba="0.9373 0.2667 0.2667 1" group="3" contype="1" conaffinity="1" type="mesh" mesh="link2" />
+            <body name="link3" pos="0.28503 0 0" quat="0.6239962 0 0 -0.7814274">
+              <joint name="joint3" type="hinge" axis="0 0 1" limited="true" range="-2.967 0" damping="0" frictionloss="0"/>
+              <inertial pos="-0.0202738 -0.133915 -0.0004587" mass="0.5" fullinertia="0.01361711 0.00045024 0.01380322 0.00165794 -0.00000048 -0.00000045"/>
+              <geom pos="0 0 0" group="1" contype="0" conaffinity="0" material="link3_mat" type="mesh" mesh="link3" />
+              <geom pos="0 0 0" rgba="0.9373 0.2667 0.2667 1" group="3" contype="1" conaffinity="1" type="mesh" mesh="link3" />
+              <body name="link4" pos="-0.021984 -0.25075 0" quat="0.7071055 0.7071081 0 0">
+                <joint name="joint4" type="hinge" axis="0 0 1" limited="true" range="-1.745 1.745" damping="0" frictionloss="0"/>
+                <inertial pos="-0.0000967 0.0008761 -0.0049688" mass="0.38" fullinertia="0.00018501 0.00018965 0.00015484 0.00000054 0.0000012 -0.00000841"/>
+                <geom pos="0 0 0" group="1" contype="0" conaffinity="0" material="link4_mat" type="mesh" mesh="link4" />
+                <geom pos="0 0 0" rgba="0.9373 0.2667 0.2667 1" group="3" contype="1" conaffinity="1" type="mesh" mesh="link4" />
+                <body name="link5" pos="0 0 0" quat="0.7071055 -0.7071081 0 0">
+                  <joint name="joint5" type="hinge" axis="0 0 1" limited="true" range="-1.22 1.22" damping="0" frictionloss="0"/>
+                  <inertial pos="-0.0000411 -0.0566487 -0.0037206" mass="0.383" fullinertia="0.00166169 0.0001851 0.00164321 0.00000006 -0.00000007 0.00001026"/>
+                  <geom pos="0 0 0" group="1" contype="0" conaffinity="0" material="link5_mat" type="mesh" mesh="link5" />
+                  <geom pos="0 0 0" rgba="0.9373 0.2667 0.2667 1" group="3" contype="1" conaffinity="1" type="mesh" mesh="link5" />
+                  <body name="link6" pos="0.0000883 -0.091 0" quat="0.7071055 0.7071081 0 0">
+                    <joint name="joint6" type="hinge" axis="0 0 1" limited="true" range="-2.0944 2.0944" damping="0" frictionloss="0"/>
+                    <inertial pos="-0.0000883 0.0000091 -0.002" mass="0.007" diaginertia="0.000000573 0.000000573 0.0000010674"/>
+                    <geom pos="0 0 0" group="1" contype="0" conaffinity="0" material="link6_mat" type="mesh" mesh="link6" />
+                    <geom pos="0 0 0" rgba="0.9373 0.2667 0.2667 1" group="3" contype="1" conaffinity="1" type="mesh" mesh="link6" />
+                    <body name="gripper_base" pos="0 0 0">
+                      <inertial pos="-0.0001838 0.0000805 0.0321437" mass="0.45" fullinertia="0.00092934 0.00071447 0.00039442 0.00000034 -0.00000738 0.00000005"/>
+                      <geom pos="0 0 0" group="1" contype="0" conaffinity="0" material="gripper_base_mat" type="mesh" mesh="gripper_base" />
+                      <geom pos="0 0 0" rgba="0.9373 0.2667 0.2667 1" group="3" contype="1" conaffinity="1" type="mesh" mesh="gripper_base" />
+                      <body name="link7" pos="0 0 0.1358" quat="0.7071055 0.7071081 0 0">
+                        <joint name="joint7" type="slide" axis="0 0 1" limited="true" range="0 0.035" damping="0" frictionloss="0"/>
+                        <inertial pos="0.0006512 -0.049193 0.0097226" mass="0.025" fullinertia="0.00007371 0.00000781 0.0000747 -0.00000113 0.00000021 -0.00001372"/>
+                        <geom pos="0 0 0" group="1" contype="0" conaffinity="0" material="link7_mat" type="mesh" mesh="link7" />
+                        <geom pos="0 0 0" rgba="0.9373 0.2667 0.2667 1" group="3" contype="1" conaffinity="1" type="mesh" mesh="link7" />
+                      </body>
+                      <body name="link8" pos="0 0 0.1358" quat="-0.0000026 -0.0000026 -0.7071081 -0.7071055">
+                        <joint name="joint8" type="slide" axis="0 0 -1" limited="true" range="-0.035 0" damping="0" frictionloss="0"/>
+                        <inertial pos="0.0006512 -0.049193 0.0097226" mass="0.025" fullinertia="0.00007371 0.00000781 0.0000747 -0.00000113 0.00000021 -0.00001372"/>
+                        <geom pos="0 0 0" group="1" contype="0" conaffinity="0" material="link8_mat" type="mesh" mesh="link8" />
+                        <geom pos="0 0 0" rgba="0.9373 0.2667 0.2667 1" group="3" contype="1" conaffinity="1" type="mesh" mesh="link8" />
+                      </body>
+                    </body>
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+  <actuator>
+    <motor name="fl_hipx_joint_motor" joint="fl_hipx_joint" gear="1" ctrllimited="true" ctrlrange="-76.4 76.4" />
+    <motor name="fl_hipy_joint_motor" joint="fl_hipy_joint" gear="1" ctrllimited="true" ctrlrange="-76.4 76.4" />
+    <motor name="fl_knee_joint_motor" joint="fl_knee_joint" gear="1" ctrllimited="true" ctrlrange="-76.4 76.4" />
+    <motor name="fl_wheel_joint_motor" joint="fl_wheel_joint" gear="1" ctrllimited="true" ctrlrange="-21.6 21.6" />
+    <motor name="fr_hipx_joint_motor" joint="fr_hipx_joint" gear="1" ctrllimited="true" ctrlrange="-76.4 76.4" />
+    <motor name="fr_hipy_joint_motor" joint="fr_hipy_joint" gear="1" ctrllimited="true" ctrlrange="-76.4 76.4" />
+    <motor name="fr_knee_joint_motor" joint="fr_knee_joint" gear="1" ctrllimited="true" ctrlrange="-76.4 76.4" />
+    <motor name="fr_wheel_joint_motor" joint="fr_wheel_joint" gear="1" ctrllimited="true" ctrlrange="-21.6 21.6" />
+    <motor name="hl_hipx_joint_motor" joint="hl_hipx_joint" gear="1" ctrllimited="true" ctrlrange="-76.4 76.4" />
+    <motor name="hl_hipy_joint_motor" joint="hl_hipy_joint" gear="1" ctrllimited="true" ctrlrange="-76.4 76.4" />
+    <motor name="hl_knee_joint_motor" joint="hl_knee_joint" gear="1" ctrllimited="true" ctrlrange="-76.4 76.4" />
+    <motor name="hl_wheel_joint_motor" joint="hl_wheel_joint" gear="1" ctrllimited="true" ctrlrange="-21.6 21.6" />
+    <motor name="hr_hipx_joint_motor" joint="hr_hipx_joint" gear="1" ctrllimited="true" ctrlrange="-76.4 76.4" />
+    <motor name="hr_hipy_joint_motor" joint="hr_hipy_joint" gear="1" ctrllimited="true" ctrlrange="-76.4 76.4" />
+    <motor name="hr_knee_joint_motor" joint="hr_knee_joint" gear="1" ctrllimited="true" ctrlrange="-76.4 76.4" />
+    <motor name="hr_wheel_joint_motor" joint="hr_wheel_joint" gear="1" ctrllimited="true" ctrlrange="-21.6 21.6" />
+    <motor name="joint1_motor" joint="joint1" gear="1" ctrllimited="true" ctrlrange="-100 100" />
+    <motor name="joint2_motor" joint="joint2" gear="1" ctrllimited="true" ctrlrange="-100 100" />
+    <motor name="joint3_motor" joint="joint3" gear="1" ctrllimited="true" ctrlrange="-100 100" />
+    <motor name="joint4_motor" joint="joint4" gear="1" ctrllimited="true" ctrlrange="-100 100" />
+    <motor name="joint5_motor" joint="joint5" gear="1" ctrllimited="true" ctrlrange="-100 100" />
+    <motor name="joint6_motor" joint="joint6" gear="1" ctrllimited="true" ctrlrange="-100 100" />
+    <motor name="joint7_motor" joint="joint7" gear="1" ctrllimited="true" ctrlrange="-10 10" />
+    <motor name="joint8_motor" joint="joint8" gear="1" ctrllimited="true" ctrlrange="-10 10" />
+  </actuator>
+</mujoco>
