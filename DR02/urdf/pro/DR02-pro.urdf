@@ -1079,7 +1079,7 @@
   <!-- d435f depth center (head) -->
   <link name="d435_head_link"> 
   </link>  
-  <joint name="d435_head_joint" type="fixed"> 
+  <joint name="d435_head_joint" type="fixed" dont_collapse="true"> 
     <origin xyz="0.11871 0.0175 0.5096" rpy="0 0.61086 0"/>  
     <parent link="body"/>  
     <child link="d435_head_link"/>  
@@ -1089,7 +1089,7 @@
   <!-- d435f depth center (front) -->
   <link name="d435_front_link"> 
   </link>  
-  <joint name="d435_front_joint" type="fixed"> 
+  <joint name="d435_front_joint" type="fixed" dont_collapse="true"> 
     <origin xyz="0.12559 0.0175 0.078407" rpy="0 1.0472 0"/>  
     <parent link="body"/>  
     <child link="d435_front_link"/>  
@@ -1099,7 +1099,7 @@
   <!-- d435f depth center (rear) -->
   <link name="d435_rear_link"> 
   </link>  
-  <joint name="d435_rear_joint" type="fixed"> 
+  <joint name="d435_rear_joint" type="fixed" dont_collapse="true"> 
     <origin xyz="-0.11241 -0.0175 -0.037264" rpy="0 1.0472 3.1416"/>  
     <parent link="body"/>  
     <child link="d435_rear_link"/>  
@@ -1109,7 +1109,7 @@
   <!-- lidar center -->
   <link name="lidar_link"> 
   </link>  
-  <joint name="lidar_joint" type="fixed"> 
+  <joint name="lidar_joint" type="fixed" dont_collapse="true"> 
     <origin xyz="0.09784 1.003E-05 0.4645" rpy="0 0 0"/>  
     <parent link="body"/>  
     <child link="lidar_link"/>  
@@ -1119,7 +1119,7 @@
   <!-- IMU (head) -->
   <link name="imu_head_link"> 
   </link>  
-  <joint name="imu_head_joint" type="fixed"> 
+  <joint name="imu_head_joint" type="fixed" dont_collapse="true"> 
     <origin xyz="-0.0003333 0.021947 0.56429" rpy="0 0 0"/>  
     <parent link="body"/>  
     <child link="imu_head_link"/>  
@@ -1129,7 +1129,7 @@
   <!-- IMU (base) -->
   <link name="imu_base_link"> 
   </link>  
-  <joint name="imu_base_joint" type="fixed"> 
+  <joint name="imu_base_joint" type="fixed" dont_collapse="true"> 
     <origin xyz="-0.0003333 0.0014869 -0.3546" rpy="0 0 0"/>  
     <parent link="body"/>  
     <child link="imu_base_link"/>  
