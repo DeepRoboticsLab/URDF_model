@@ -67,7 +67,7 @@
     <parent link="base_link"/>
     <child link="fl_hipx"/>
     <axis xyz="-1 0 0"/>
-    <limit lower="-0.611" upper="0.436" effort="76.4" velocity="22.4"/>
+    <limit lower="-0.436" upper="0。611" effort="76.4" velocity="22.4"/>
   </joint>
   <link name="fl_hipy">
     <inertial>
@@ -195,7 +195,7 @@
     <parent link="base_link"/>
     <child link="fr_hipx"/>
     <axis xyz="-1 0 0"/>
-    <limit lower="-0.436" upper="0.611" effort="76.4" velocity="22.4"/>
+    <limit lower="-0.611" upper="0.436" effort="76.4" velocity="22.4"/>
   </joint>
   <link name="fr_hipy">
     <inertial>
@@ -323,7 +323,7 @@
     <parent link="base_link"/>
     <child link="hl_hipx"/>
     <axis xyz="-1 0 0"/>
-    <limit lower="-0.611" upper="0.436" effort="76.4" velocity="22.4"/>
+    <limit lower="-0.436" upper="0.611" effort="76.4" velocity="22.4"/>
   </joint>
   <link name="hl_hipy">
     <inertial>
@@ -451,7 +451,7 @@
     <parent link="base_link"/>
     <child link="hr_hipx"/>
     <axis xyz="-1 0 0"/>
-    <limit lower="-0.436" upper="0.611" effort="76.4" velocity="22.4"/>
+    <limit lower="-0.611" upper="0.436" effort="76.4" velocity="22.4"/>
   </joint>
   <link name="hr_hipy">
     <inertial>

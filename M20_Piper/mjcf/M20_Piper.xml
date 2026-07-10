@@ -66,7 +66,7 @@
       <geom pos="0 0.045 0" quat="0.7071068 0 0.7071068 0" rgba="0.9373 0.2667 0.2667 1" group="3" contype="1" conaffinity="1" type="cylinder" size="0.07 0.375" />
       <geom pos="0 -0.045 0" quat="0.7071068 0 0.7071068 0" rgba="0.9373 0.2667 0.2667 1" group="3" contype="1" conaffinity="1" type="cylinder" size="0.07 0.375" />
       <body name="fl_hipx" pos="0.3141 0.0685 0">
-        <joint name="fl_hipx_joint" type="hinge" axis="-1 0 0" limited="true" range="-0.611 0.436" damping="0" frictionloss="0"/>
+        <joint name="fl_hipx_joint" type="hinge" axis="-1 0 0" limited="true" range="-0.436 0.611" damping="0" frictionloss="0"/>
         <inertial pos="-0.0111893 0.0089169 0.0004057" mass="0.26136" fullinertia="0.000186 0.000371 0.000288 0.000025 -0.000012 -0.000008"/>
         <geom pos="0 0 0" group="1" contype="0" conaffinity="0" material="fl_hipx_mat" type="mesh" mesh="fl_hipx" />
         <geom pos="0 0.055 0" quat="0.7071068 0.7071068 0 0" rgba="0.9373 0.2667 0.2667 1" group="3" contype="1" conaffinity="1" type="cylinder" size="0.048 0.07" />
@@ -92,7 +92,7 @@
         </body>
       </body>
       <body name="fr_hipx" pos="0.3141 -0.0685 0">
-        <joint name="fr_hipx_joint" type="hinge" axis="-1 0 0" limited="true" range="-0.436 0.611" damping="0" frictionloss="0"/>
+        <joint name="fr_hipx_joint" type="hinge" axis="-1 0 0" limited="true" range="-0.611 0.436" damping="0" frictionloss="0"/>
         <inertial pos="-0.0110901 -0.0087503 0.0005214" mass="0.26136" fullinertia="0.000186 0.000371 0.000288 -0.000026 -0.000012 0.000008"/>
         <geom pos="0 0 0" group="1" contype="0" conaffinity="0" material="fr_hipx_mat" type="mesh" mesh="fr_hipx" />
         <geom pos="0 -0.055 0" quat="0.7071068 0.7071068 0 0" rgba="0.9373 0.2667 0.2667 1" group="3" contype="1" conaffinity="1" type="cylinder" size="0.048 0.07" />
@@ -118,7 +118,7 @@
         </body>
       </body>
       <body name="hl_hipx" pos="-0.3141 0.0685 0">
-        <joint name="hl_hipx_joint" type="hinge" axis="-1 0 0" limited="true" range="-0.611 0.436" damping="0" frictionloss="0"/>
+        <joint name="hl_hipx_joint" type="hinge" axis="-1 0 0" limited="true" range="-0.436 0.611" damping="0" frictionloss="0"/>
         <inertial pos="0.0110901 0.0087501 0.0005249" mass="0.26136" fullinertia="0.000186 0.000371 0.000288 -0.000025 0.000012 -0.000008"/>
         <geom pos="0 0 0" group="1" contype="0" conaffinity="0" material="hl_hipx_mat" type="mesh" mesh="hl_hipx" />
         <geom pos="0 0.055 0" quat="0.7071068 0.7071068 0 0" rgba="0.9373 0.2667 0.2667 1" group="3" contype="1" conaffinity="1" type="cylinder" size="0.048 0.07" />
@@ -144,7 +144,7 @@
         </body>
       </body>
       <body name="hr_hipx" pos="-0.3141 -0.0685 0">
-        <joint name="hr_hipx_joint" type="hinge" axis="-1 0 0" limited="true" range="-0.436 0.611" damping="0" frictionloss="0"/>
+        <joint name="hr_hipx_joint" type="hinge" axis="-1 0 0" limited="true" range="-0.611 0.436" damping="0" frictionloss="0"/>
         <inertial pos="0.0110902 -0.0087501 0.0005249" mass="0.26136" fullinertia="0.000186 0.000371 0.000288 0.000025 0.000012 0.000008"/>
         <geom pos="0 0 0" group="1" contype="0" conaffinity="0" material="hr_hipx_mat" type="mesh" mesh="hr_hipx" />
         <geom pos="0 -0.055 0" quat="0.7071068 0.7071068 0 0" rgba="0.9373 0.2667 0.2667 1" group="3" contype="1" conaffinity="1" type="cylinder" size="0.048 0.07" />
