@@ -11,7 +11,7 @@ High-resolution models are available on [Google Drive](https://drive.google.com/
 | **Lite3** | <img src="./images/lite3_high_res.png" width="200" /> | <img src="./images/lite3.png" width="200" /> |
 | **X30** | <img src="./images/x30_high_res.png" width="200" /> | <img src="./images/x30.png" width="200" /> |
 | **M20** | <img src="./images/m20_high_res.png" width="200" /> | <img src="./images/m20.png" width="200" /> |
-| **M20S** | Not available yet | Not available yet |
+| **M20S** | Not available yet | <img src="./images/m20s.png" width="200" /> |
 | **M20_Piper** | Not available yet | <img src="./images/m20_piper.png" width="200" /> |
 | **DR02 Pro** | Not available yet | <img src="./images/dr02_pro.png" width="200" /> |
 | **DR02 Standard** | Not available yet | <img src="./images/dr02_std.png" width="200" /> |
