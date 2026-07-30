@@ -13,8 +13,8 @@ High-resolution models are available on [Google Drive](https://drive.google.com/
 | **M20S** | — | <img src="./images/rendered/low_res/M20S.png" width="320" alt="Low-resolution M20S render" /> |
 | **M20_Piper** | — | <img src="./images/rendered/low_res/M20_Piper.png" width="320" alt="Low-resolution M20 Piper render" /> |
 | **X30** | <img src="./images/rendered/high_res/X30.png" width="320" alt="High-resolution X30 render" /> | <img src="./images/rendered/low_res/X30.png" width="320" alt="Low-resolution X30 render" /> |
-| **DR02 Pro** | <img src="./images/rendered/high_res/CR1-B2-PRO.png" width="320" alt="High-resolution DR02 Pro render" /> | <img src="./images/rendered/low_res/DR02-pro.png" width="320" alt="Low-resolution DR02 Pro render" /> |
-| **DR02 Standard** | <img src="./images/rendered/high_res/CR1-B2-STD.png" width="320" alt="High-resolution DR02 Standard render" /> | <img src="./images/rendered/low_res/DR02-standard.png" width="320" alt="Low-resolution DR02 Standard render" /> |
+| **DR02 Pro** | <img src="./images/rendered/high_res/dr02-B2-PRO.png" width="320" alt="High-resolution DR02 Pro render" /> | <img src="./images/rendered/low_res/DR02-pro.png" width="320" alt="Low-resolution DR02 Pro render" /> |
+| **DR02 Standard** | <img src="./images/rendered/high_res/dr02-B2-STD.png" width="320" alt="High-resolution DR02 Standard render" /> | <img src="./images/rendered/low_res/DR02-standard.png" width="320" alt="Low-resolution DR02 Standard render" /> |
 
 ## Contributors
 
