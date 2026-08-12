@@ -469,4 +469,58 @@
     <child link="HR_FOOT" />
   </joint>
 
+  <!-- LiDAR links fixed to TORSO -->
+  <link name="LIDAR_FRONT_UP">
+    <inertial>
+      <mass value="1e-5" />
+      <inertia ixx="1e-12" ixy="0" ixz="0" iyy="1e-12" iyz="0" izz="1e-12" />
+    </inertial>
+  </link>
+
+  <joint name="LIDAR_FRONT_UP_joint" type="fixed">
+    <origin xyz="0.44367 0 0.05415" rpy="0 0.4363 0" />
+    <parent link="TORSO" />
+    <child link="LIDAR_FRONT_UP" />
+  </joint>
+
+  <link name="LIDAR_FRONT_DOWN">
+    <inertial>
+      <mass value="1e-5" />
+      <inertia ixx="1e-12" ixy="0" ixz="0" iyy="1e-12" iyz="0" izz="1e-12" />
+    </inertial>
+  </link>
+
+  <joint name="LIDAR_FRONT_DOWN_joint" type="fixed">
+    <origin xyz="0.43297 0 -0.05519" rpy="0 0.4363 0" />
+    <parent link="TORSO" />
+    <child link="LIDAR_FRONT_DOWN" />
+  </joint>
+
+  <link name="LIDAR_REAR_UP">
+    <inertial>
+      <mass value="1e-5" />
+      <inertia ixx="1e-12" ixy="0" ixz="0" iyy="1e-12" iyz="0" izz="1e-12" />
+    </inertial>
+  </link>
+
+  <joint name="LIDAR_REAR_UP_joint" type="fixed">
+    <origin xyz="-0.46576 0 0.03484" rpy="0 -0.8029 0" />
+    <parent link="TORSO" />
+    <child link="LIDAR_REAR_UP" />
+  </joint>
+
+  <link name="LIDAR_REAR_DOWN">
+    <inertial>
+      <mass value="1e-5" />
+      <inertia ixx="1e-12" ixy="0" ixz="0" iyy="1e-12" iyz="0" izz="1e-12" />
+    </inertial>
+  </link>
+
+  <joint name="LIDAR_REAR_DOWN_joint" type="fixed">
+    <origin xyz="-0.41074 0 -0.05601" rpy="0 -0.8029 0" />
+    <parent link="TORSO" />
+    <child link="LIDAR_REAR_DOWN" />
+  </joint>
+
+
 </robot>

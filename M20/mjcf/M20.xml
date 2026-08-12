@@ -62,6 +62,12 @@
             <site name="imu_site" pos="0.0632 -0.0268 -0.0435" size="0.005" rgba="1 0 0 1"/>
             <site name="base_site" pos="0 0 0" quat="1 0 0 0"/>
 
+            <!-- CA9B sensor frames. Translations are converted from millimeters to meters. -->
+            <site name="front_camera" pos="0.37646 0 0.03738" size="0.005" rgba="0 1 0 1"/>
+            <site name="rear_camera" pos="-0.37646 0 0.03738" size="0.005" rgba="0 1 0 1"/>
+            <site name="front_lidar" pos="0.32028 0 -0.013" size="0.005" rgba="0 0 1 1"/>
+            <site name="rear_lidar" pos="-0.32028 0 -0.013" size="0.005" rgba="0 0 1 1"/>
+
             <geom type="mesh" mesh="base_link" class="visual"/>
             <geom size="0.375 0.045 0.07" type="box" class="collision"/>
             <geom size="0.07 0.375" pos="0 0.045 0" quat="0.707107 0 0.707107 0" type="cylinder" class="collision"/>
