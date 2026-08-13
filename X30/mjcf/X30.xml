@@ -25,6 +25,21 @@
       <inertial pos="0 0 0" quat="0.000872206 0.707353 0.000314919 0.70686" mass="30.7" diaginertia="0.757268 0.597627 0.364306"/>
       <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="torso"/>
       <geom size="0.23 0.13 0.09" type="box"/>
+
+      <!-- LiDARs -->
+      <body name="LIDAR_FRONT_UP" pos="0.44367 0 0.05415" quat="0.97630 0 0.21644 0">
+        <inertial pos="0 0 0" mass="1e-5" diaginertia="1e-12 1e-12 1e-12"/>
+      </body>
+      <body name="LIDAR_FRONT_DOWN" pos="0.43297 0 -0.05519" quat="0.97630 0 0.21644 0">
+        <inertial pos="0 0 0" mass="1e-5" diaginertia="1e-12 1e-12 1e-12"/>
+      </body>
+      <body name="LIDAR_REAR_UP" pos="-0.46576 0 0.03484" quat="0.92050 0 -0.39073 0">
+        <inertial pos="0 0 0" mass="1e-5" diaginertia="1e-12 1e-12 1e-12"/>
+      </body>
+      <body name="LIDAR_REAR_DOWN" pos="-0.41074 0 -0.05601" quat="0.92050 0 -0.39073 0">
+        <inertial pos="0 0 0" mass="1e-5" diaginertia="1e-12 1e-12 1e-12"/>
+      </body>
+
       <body name="FL_HIP" pos="0.291 0.08 0">
         <inertial pos="-0.0018591 -0.011377 0.00027039" quat="0.492096 0.500552 0.506945 0.500295" mass="1.43" diaginertia="0.00267847 0.00159184 0.00140649"/>
         <joint name="FL_HipX_joint" pos="0 0 0" axis="-1 0 0" range="-0.323 0.585" actuatorfrcrange="-84 84"/>
@@ -119,4 +134,5 @@
       </body>
     </body>
   </worldbody>
+
 </mujoco>

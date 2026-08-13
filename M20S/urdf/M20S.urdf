@@ -552,4 +552,34 @@
         <axis xyz="0 -1 0"/>
         <limit effort="28.5" velocity="104.45"/>
     </joint>
+
+    <!-- CA9B sensor frames. Translations are converted from millimeters to meters.
+         The source document specifies no additional rotation for these sensors. -->
+    <link name="front_camera_link"/>
+    <joint name="front_camera_joint" type="fixed">
+        <origin xyz="0.37646 0 0.03738" rpy="0 0 0"/>
+        <parent link="base_link"/>
+        <child link="front_camera_link"/>
+    </joint>
+
+    <link name="rear_camera_link"/>
+    <joint name="rear_camera_joint" type="fixed">
+        <origin xyz="-0.37646 0 0.03738" rpy="0 0 0"/>
+        <parent link="base_link"/>
+        <child link="rear_camera_link"/>
+    </joint>
+
+    <link name="front_lidar_link"/>
+    <joint name="front_lidar_joint" type="fixed">
+        <origin xyz="0.32028 0 -0.013" rpy="0 0 0"/>
+        <parent link="base_link"/>
+        <child link="front_lidar_link"/>
+    </joint>
+
+    <link name="rear_lidar_link"/>
+    <joint name="rear_lidar_joint" type="fixed">
+        <origin xyz="-0.32028 0 -0.013" rpy="0 0 0"/>
+        <parent link="base_link"/>
+        <child link="rear_lidar_link"/>
+    </joint>
 </robot>
